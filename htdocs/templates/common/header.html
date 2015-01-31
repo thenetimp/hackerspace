@@ -1,0 +1,54 @@
+<div class="header" ng-controller="HeaderController as headCtrl">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">{{ headCtrl.config.brand }}</a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right" ng-hide="headCtrl.user">
+          <li class="dropdown" ng-controller="AuthController as authCtrl">
+            <a class="dropdown-toggle" href data-toggle="dropdown">
+              Sign In
+              <strong class="caret"></strong>
+            </a>
+            <div class="dropdown-menu auth-form-container" style="padding: 15px; padding-bottom: 0px;" >
+              <form role="form" ng-submit="authCtrl.authenticate();">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" placeholder="Enter email" ng-model="authCtrl.authUser.emailAddress" >
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" placeholder="Password" ng-model="authCtrl.authUser.password">
+                </div>
+                <div class="form-group checkbox">
+                  <label>
+                        <input type="checkbox" ng-model="authCtrl.authUser.remember"> Remember Me
+                  </label>
+                </div>
+                <div class="form-group">
+                  <button class="btn btn-primary btn-full">Sign In</button>
+                </div>
+              </form>
+            </div>
+          </li>
+          <li class="divider-vertical"></li>
+          <li><a href="/#/register">Register</a></li>
+        </ul>        
+        <ul class="nav navbar-nav navbar-right" ng-show="headCtrl.user">
+          <li><a href="/#/sign-in">Profile</a></li>
+          <li class="divider-vertical"></li>
+          <li ng-controller="AuthController as authCtrl">
+            <a href ng-click="authCtrl.deauthenticate();">Sign Out</a>
+          </li>
+        </ul>        
+      </div>
+    </div>
+  </nav>
+</div>

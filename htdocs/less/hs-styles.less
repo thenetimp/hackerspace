@@ -1,0 +1,83 @@
+// Variables.  Naming convention sucks, but we'll figure it out.
+@background-color: #eee;
+@inactive-color: #999;
+@button-clean-top-border: #ccc;
+@basic-border-color: #ccc;
+@info-color: #46b8da;
+
+@success-background-color: #dff0d8;
+@success-text-color: #4b763d;
+@warning-background-color: #fcf8e3;
+@warning-text-color: #917a55;
+@danger-background-color: #f2dede;
+@danger-text-color: #ad4442;
+
+// Sticky footer at bottom requires margins and paddings on everything to be 0.
+// This may mess around with bootstrap or not.
+* {margin:0;padding:0;} 
+
+html, body {
+  height: 100%;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+
+  .wrapper {
+    min-height: 100%;
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 0px 20px;
+    
+    .header {
+      padding-top: 10px;
+
+      .nav-header {
+        padding: 0px 5px 8px 5px;
+
+        a {
+          img.brand {
+            height: 49px;
+          }
+        }
+      }
+      
+      .auth-form-container {
+        width: 300px;
+        
+      }
+    }
+
+    .header::after {
+      clear: both;
+    }
+
+    .main {
+      padding-bottom:80px; /* must be same height as the footer or larger*/
+    }
+  }
+  
+  .footer {
+    position: relative;
+    padding: 0px 10px;
+    margin-left: auto;
+    margin-right: auto;
+  	margin-top: -80px; /* negative value of footer height */
+  	height: 80px;
+  	clear:both;
+    
+    .row {
+      padding: 8px 5px 8px 5px;
+    }
+  }
+  
+  .btn-full {
+    display: block;
+    width: 100%;
+  }
+  
+}

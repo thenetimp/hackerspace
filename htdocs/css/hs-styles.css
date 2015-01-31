@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+html {
+  overflow-y: scroll;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+body .wrapper {
+  min-height: 100%;
+  background-color: #fff;
+  margin: 0 auto;
+  padding: 0px 20px;
+}
+body .wrapper .header {
+  padding-top: 10px;
+}
+body .wrapper .header .nav-header {
+  padding: 0px 5px 8px 5px;
+}
+body .wrapper .header .nav-header a img.brand {
+  height: 49px;
+}
+body .wrapper .header .auth-form-container {
+  width: 300px;
+}
+body .wrapper .header::after {
+  clear: both;
+}
+body .wrapper .main {
+  padding-bottom: 80px;
+  /* must be same height as the footer or larger*/
+}
+body .footer {
+  position: relative;
+  padding: 0px 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -80px;
+  /* negative value of footer height */
+  height: 80px;
+  clear: both;
+}
+body .footer .row {
+  padding: 8px 5px 8px 5px;
+}
+body .btn-full {
+  display: block;
+  width: 100%;
+}

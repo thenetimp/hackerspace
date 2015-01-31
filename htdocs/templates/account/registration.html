@@ -1,0 +1,75 @@
+  <div hs-header></div>
+  
+  <div class="row" ng-controller="RegisterController as regCtrl">
+    <div class="col-md-6 col-md-offset-3">
+        <form role="registration" ng-submit="regCtrl.registerUser()">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>First Name</label>
+                <input type="text" ng-require="true" class="form-control" placeholder="First Name" ng-model="regCtrl.registration.first_name">
+              </div>
+            </div>
+            <div class="col-md-6">
+                <label>Last Name</label>
+                <input type="text" class="form-control" placeholder="Last Name" ng-model="regCtrl.registration.last_name" ng-require="true" >
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <label>Alias/Username</label>
+                <input type="text" class="form-control" placeholder="Alias or Username" ng-model="regCtrl.registration.alias" ng-require="true" >
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" class="form-control" placeholder="Email Address" ng-model="regCtrl.registration.email_address" ng-require="true" >
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-control" placeholder="Password" ng-model="regCtrl.registration.password" ng-require="true">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Confirm Password</label>
+                <input type="password" class="form-control" placeholder="Password Confirmation" ng-model="regCtrl.registration.passwordConfirm" ng-require="true">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group checkbox">
+                <label>
+                  <input type="checkbox" ng-model="regCtrl.registration.agree_tos" ng-require="true"> I have read and agree to the <a href="/#/terms-of-service">terms of service</a>.
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group checkbox">
+                <label>
+                      <input type="checkbox" ng-model="regCtrl.registration.subscribe_newsletter"> Subscribe to our newsletter.
+                </label>
+              </div>
+            </div>
+          </div>
+          &nbsp;
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <button class="btn btn-primary btn-full">Register New User</button>
+              </div>
+            </div>
+          </div>
+        </form>
+    </div>
